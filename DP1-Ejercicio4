@@ -1,0 +1,33 @@
+static void Main(string[] args)
+        {
+            Console.Title = "\n\t Calculo para el salario semanal. ";
+            double valorHora, salarioSemanal=0;
+            int horasTrabajadas;
+                
+
+            Console.WriteLine("Cálculo de salario semanal");
+
+            Console.WriteLine();
+
+            Console.WriteLine("Ingrese el valor por hora normal: ");
+
+             valorHora = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Ingrese las horas trabajadas en la semana: ");
+             horasTrabajadas = int.Parse(Console.ReadLine());
+
+             
+            if (horasTrabajadas <= 30)
+            {
+                salarioSemanal = valorHora * horasTrabajadas;
+            }
+            else
+            {
+                salarioSemanal = 30 * valorHora + (horasTrabajadas - 30) * valorHora * 1.25;
+            }
+
+            Console.WriteLine("El salario semanal es de: " + salarioSemanal + " dólares");
+            Console.ReadLine();
+
+            Console.ReadKey();
+        }
